@@ -9,6 +9,7 @@ from datetime import datetime
 from rich.console import Console
 from termcolor import colored
 from pyfiglet import Figlet
+import base64
 console = Console()
 
 def anim():
@@ -534,6 +535,59 @@ def SSH_Brute():
 			elif choice == '0':
 				break
 	Menu()
+def Base64():
+	os.system("clear")
+	banner = Figlet(font = "slant")
+	print(colored(banner.renderText("BASE64"), "green"))
+	print("\n")	
+	console.print(''' 
+###################
+# [1] Encoding 🔒 # 
+# [2] Decoding 🔓 #
+# #################
+				''', style="bold blue")
+	base64option = input("Enter Your Option : ")
+
+	while True:
+		if base64option == "1":
+		    text = input("Enter Your Text You Want To Encrypt : ")
+		    text_bytes = text.encode('ascii')
+		    base64_bytes = base64.b64encode(text_bytes)
+		    anim()
+		    print("\n")
+		    base64_message = base64_bytes.decode('ascii')
+		    console.print("The Encoded Text : \n", style="bold green")
+		    print(base64_message)
+		    print("\n")
+		    console.print("Do you Want To encode more text ? ", style="bold magenta")
+		    back = input("[1]Yes [2]No : ")
+		    if back == "1":
+		        os.system("clear")
+		        Base64()
+		    elif back == "2":
+		        os.system("clear")
+		        Main_Menu()
+
+		elif base64option == "2":
+		    text = input("Enter Your Text You Want To Encrypt : ")
+		    text_bytes = text.encode('ascii')
+		    base64_bytes = base64.b64decode(text_bytes)
+		    anim()
+		    print("\n")
+		    base64_message = base64_bytes.decode('ascii')
+		    console.print("The Encoded Text : \n", style="bold green")
+		    console.print(base64_message, style="bold green") 
+		    print("\n")
+		    console.print("Do you Want To encode more text ? ", style="bold magenta")
+		    back = input("[1]Yes [2]No")
+		    if back == "1":
+		        os.system("clear")
+		        Base64()
+		    elif back == "2":
+		        os.system("clear")
+		        Main_Menu()
+		else :
+			console.print("Wrong Option ⛔", style="bold red")
 
 def Main_Menu():
 	while True:
@@ -576,9 +630,10 @@ Instagram 📷 : https://www.instagram.com/r3xxv0s5en
 
 		console.print(''' 
 #################################
-# [1] Payload Genrator ☠️        #
-# [2] Nmap Scan 👁               #
+# [1] Payload Genrator ☠️       #
+# [2] Nmap Scan 👁              #
 # [3] SSH Brute Force 🔐        #
+# [4] Base64 Encode/Decode      #
 # [0] Exit 👋                   #
 #################################
 			''', style="bold magenta")
@@ -596,6 +651,10 @@ Instagram 📷 : https://www.instagram.com/r3xxv0s5en
 		elif user_choice == '3':
 			os.system("clear")
 			SSH_Brute()
+
+		elif user_choice == '4':
+			os.system("clear")
+			Base64()
 
 		elif user_choice == '0':
 			console.print("\nGood Bye 👋\n", style="bold red")
