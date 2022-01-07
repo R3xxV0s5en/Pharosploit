@@ -550,6 +550,7 @@ def Base64():
 
 	while True:
 		if base64option == "1":
+			console.print("Encoding started at:" + str(datetime.now()), style="bold magenta")
 		    text = input("Enter Your Text You Want To Encrypt : ")
 		    text_bytes = text.encode('ascii')
 		    base64_bytes = base64.b64encode(text_bytes)
@@ -569,6 +570,7 @@ def Base64():
 		        Main_Menu()
 
 		elif base64option == "2":
+			console.print("Decoding started at:" + str(datetime.now()), style="bold magenta")
 		    text = input("Enter Your Text You Want To Encrypt : ")
 		    text_bytes = text.encode('ascii')
 		    base64_bytes = base64.b64decode(text_bytes)
