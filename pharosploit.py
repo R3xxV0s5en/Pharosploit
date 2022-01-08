@@ -138,7 +138,7 @@ def Payload_Gen():
             console.print("Attack started at : " + str(datetime.now()), style="bold magenta")
             console.print(''' 
 ##########################
-# [1] Windows Payload 🖥️  #
+# [1] Windows Payload 🖥️ #
 # [2] Android Payload 📱 #
 # [3] Php Payload 🖥      #
 # [0] Exit 👋            #
@@ -317,8 +317,8 @@ def Nmap_Scan():
             print("\n")
             console.print("Nmap started at : " + str(datetime.now()), style="bold magenta")
             console.print('''
-############################################
-# [1] Nmap Intense Scan 👁️          #
+#############################################
+# [1] Nmap Intense Scan 👁️                  #
 # [2] Nmap Intense Scan No Ping 👁️          # 
 # [3] Nmap Intense Scan All TCP Ports 👁️    #
 # [4] Nmap Ping Scan 👁️                     #
@@ -327,8 +327,8 @@ def Nmap_Scan():
 # [7] Nmap Quick traceroute 👁️              #
 # [8] Nmap Regular scan 👁️                  #
 # [9] Nmap Slow comprehensive scan 👁️       #
-# [0] Exit 👋                              #
-############################################
+# [0] Exit 👋                               #
+#############################################
             ''', style="bold blue" )
         
             choice = input("[+] Enter The Number of The Scan : ")
@@ -345,7 +345,7 @@ def Nmap_Scan():
                     os.system("clear")
                     nmap_choice()
                 else:
-                    exit()
+                    Main_Menu()
             elif choice == '2':
                 os.system("clear")
                 banner = Figlet(font = "digital")
@@ -359,7 +359,7 @@ def Nmap_Scan():
                     os.system("clear")
                     nmap_choice()
                 else:
-                    exit()
+                    Main_Menu()
             elif choice == '3':
                 os.system("clear")
                 banner = Figlet(font = "digital")
@@ -373,7 +373,7 @@ def Nmap_Scan():
                     os.system("clear")
                     nmap_choice()
                 else:
-                    exit()
+                    Main_Menu()
             elif choice == '4':
                 os.system("clear")
                 banner = Figlet(font = "digital")
@@ -387,7 +387,7 @@ def Nmap_Scan():
                     os.system("clear")
                     nmap_choice()
                 else:
-                    exit()
+                    Main_Menu()
             elif choice == '5':
                 os.system("clear")
                 banner = Figlet(font = "digital")
@@ -401,7 +401,7 @@ def Nmap_Scan():
                     os.system("clear")
                     nmap_choice()
                 else:
-                    exit()
+                    Main_Menu()
             elif choice == '6':
                 os.system("clear")
                 banner = Figlet(font = "digital")
@@ -415,7 +415,7 @@ def Nmap_Scan():
                     os.system("clear")
                     nmap_choice()
                 else:
-                    exit()
+                    Main_Menu()
             elif choice == '7':
                 os.system("clear")
                 banner = Figlet(font = "digital")
@@ -429,7 +429,7 @@ def Nmap_Scan():
                     os.system("clear")
                     nmap_choice()
                 else:
-                    exit()
+                    Main_Menu()
             elif choice == '8':
                 os.system("clear")
                 banner = Figlet(font = "digital")
@@ -443,7 +443,7 @@ def Nmap_Scan():
                     os.system("clear")
                     nmap_choice()
                 else:
-                    exit()
+                    Main_Menu()
             elif choice == '9':
                 os.system("clear")
                 banner = Figlet(font = "digital")
@@ -458,7 +458,7 @@ def Nmap_Scan():
                     os.system("clear")
                     nmap_choice()
                 else:
-                    exit()
+                    Main_Menu()
             elif choice == '0':
                 os.system("clear")
                 break
