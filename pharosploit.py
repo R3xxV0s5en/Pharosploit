@@ -16,7 +16,7 @@ def anim():
     animation = ["[■□□□□□□□□□]","[■■□□□□□□□□]", "[■■■□□□□□□□]", "[■■■■□□□□□□]", "[■■■■■□□□□□]", "[■■■■■■□□□□]", "[■■■■■■■□□□]", "[■■■■■■■■□□]", "[■■■■■■■■■□]", "[■■■■■■■■■■]"]
 
     for i in range(len(animation)):
-        time.sleep(0.2)
+        time.sleep(0.1)
         sys.stdout.write("\r" + animation[i % len(animation)])
         sys.stdout.flush()
 
